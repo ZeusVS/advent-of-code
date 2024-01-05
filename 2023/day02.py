@@ -15,22 +15,16 @@ def solvePuzzle(data, maxR, maxB, maxG):
 
         for diceSet in game:
             diceSet = diceSet.split(",")
-            red = 0
-            blue = 0
-            green = 0
             for dice in diceSet:
                 dice = dice.strip().split(" ")
                 if dice[1] == "red":
-                    red = int(dice[0])
-                    minR = max(red, minR)
+                    minR = max(minR, int(dice[0]))
                 elif dice[1] == "green":
-                    green = int(dice[0])
-                    minG = max(green, minG)
+                    minG = max(minG, int(dice[0]))
                 else:
-                    blue = int(dice[0])
-                    minB = max(blue, minB)
+                    minB = max(minB, int(dice[0]))
 
-            if red > maxR or green > maxG or blue > maxB:
+            if minR > maxR or minG > maxG or minB > maxB:
                 possible = False
 
         if possible:
