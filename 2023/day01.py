@@ -27,7 +27,7 @@ def part2(data):
 
 
 txtName = Path(__file__).stem + ".txt"
-file = open(txtName, "r")
+file = open(Path("input/"+txtName), "r")
 
 print(part1(file))
 

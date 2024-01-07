@@ -35,7 +35,7 @@ def solvePuzzle(data, maxR, maxB, maxG):
 
 
 txtName = Path(__file__).stem + ".txt"
-file = open(txtName, "r")
+file = open(Path("input/"+txtName), "r")
 
 maxRed = 12
 maxGreen = 13
